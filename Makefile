@@ -28,7 +28,7 @@ cleano:
 	rm -f *.o
 
 clean:
-	rm -f server cClient *.o
+	rm -f server cClient serverPoll *.o
 
 
 
