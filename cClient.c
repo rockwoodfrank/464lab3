@@ -59,10 +59,10 @@ void clientControl(char* serverName, char* serverPort)
 	// Adding the stdin
 	addToPollSet(STDIN_FILENO);
 
-	printf("Enter data: ");
-	fflush(stdout);
 	while(1)
 	{
+		printf("Enter data: ");
+		fflush(stdout);
 		int readyFD = pollCall(-1);
 		if (readyFD == STDIN_FILENO)
 			processStdIn(socketNum);
